@@ -1,0 +1,83 @@
+class Persona {
+    constructor(nombreCompleto, fechaNacimiento) {
+        this.nombreCompleto = nombreCompleto;
+        this.fechaNacimiento = fechaNacimiento;
+        this.hijos = []; // Lista de hijos
+    }
+
+    agregarHijo(hijo) {
+        this.hijos.push(hijo);
+    }
+}
+
+class ArbolGenealogico {
+    constructor(raiz) {
+        this.raiz = raiz;
+    }
+
+    // Recorrido en preorden
+    preorden(persona) {
+        if (persona) {
+            console.log(`${persona.nombreCompleto} (nacido el ${persona.fechaNacimiento})`);
+            for (let hijo of persona.hijos) {
+                this.preorden(hijo);
+            }
+        }
+    }
+
+    // Recorrido en postorden
+    postorden(persona) {
+        if (persona) {
+            for (let hijo of persona.hijos) {
+                this.postorden(hijo);
+            }
+            console.log(`${persona.nombreCompleto} (nacido el ${persona.fechaNacimiento})`);
+        }
+    }
+
+    // Recorrido en orden
+    enOrden(persona) {
+        if (persona) {
+            if (persona.hijos.length > 0) {
+                this.enOrden(persona.hijos[0]); // Primer hijo
+            }
+            console.log(`${persona.nombreCompleto} (nacido el ${persona.fechaNacimiento})`);
+            if (persona.hijos.length > 1) {
+                this.enOrden(persona.hijos[1]); // Segundo hijo
+            }
+        }
+    }
+}
+
+// Abuelos paternos
+const heraldo = new Persona("Heraldo Chicangana", "10/03/1940");
+const miriam = new Persona("Miriam Piamba", "15/06/1945");
+
+// Abuelos maternos
+const wilfredo = new Persona("Wilfredo Palechor", "20/02/1942");
+const amparo = new Persona("Amparo Hormiga", "25/09/1947");
+
+// Padres
+const miguel = new Persona("Miguel Chicangana", "12/08/1970");
+const johanna = new Persona("Johanna Palechor", "30/10/1975");
+
+// Hijos
+const monica = new Persona("Mónica Chicangana", "15/01/1995");
+const julian = new Persona("Julian Chicangana", "10/05/2020");
+
+
+miguel.agregarHijo(monica);
+johanna.agregarHijo(monica);
+monica.agregarHijo(julian);
+
+
+const arbolGenealogico = new ArbolGenealogico(monica);
+
+console.log("Recorrido en Preorden:");
+arbolGenealogico.preorden(arbolGenealogico.raiz);
+
+console.log("\nRecorrido en Postorden:");
+arbolGenealogico.postorden(arbolGenealogico.raiz);
+
+console.log("\nRecorrido en Orden:");
+arbolGenealogico.enOrden(arbolGenealogico.raiz);
