@@ -1,0 +1,45 @@
+
+class NodoEvento {
+    constructor(nombreEvento, ubicacion, siguiente = null) {
+        this.nombreEvento = nombreEvento;
+        this.ubicacion = ubicacion;
+        this.siguiente = siguiente;
+    }
+}
+
+class ListaEventos {
+    constructor() {
+        this.cabeza = null;
+    }
+
+    agregarEvento(nombreEvento, ubicacion) {
+        const nuevoNodo = new NodoEvento(nombreEvento, ubicacion);
+
+        if (!this.cabeza) {
+            this.cabeza = nuevoNodo;
+        } else {
+            let actual = this.cabeza;
+            while (actual.siguiente) {
+                actual = actual.siguiente;
+            }
+            actual.siguiente = nuevoNodo;
+        }
+    }
+
+    mostrarEventos() {
+        let actual = this.cabeza;
+        while (actual) {
+            console.log(`Evento: ${actual.nombreEvento}\nUbicación: ${actual.ubicacion}\n`);
+            actual = actual.siguiente;
+        }
+    }
+}
+
+const listaDeEventos = new ListaEventos();
+
+listaDeEventos.agregarEvento('Reunión con el equipo', 'Sala de conferencias 3B');
+listaDeEventos.agregarEvento('Almuerzo con el cliente', 'Restaurante Central');
+listaDeEventos.agregarEvento('Presentación del proyecto', 'Auditorio principal');
+listaDeEventos.agregarEvento('Sesión de brainstorming', 'Oficina 4C');
+
+listaDeEventos.mostrarEventos();
