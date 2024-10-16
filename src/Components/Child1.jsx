@@ -10,10 +10,7 @@ export const Child1 = () => {
           <div>Child Component 1</div>
           <pre>
             {JSON.stringify(user, null, 3)}
-          </pre>
-        
-        
-        
+          </pre> 
         </>
     )
     
