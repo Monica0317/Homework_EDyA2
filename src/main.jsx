@@ -8,8 +8,10 @@ import './index.css'
 import { GifGrid } from './Components/GifGrid.jsx'
 import { MultipleCustomHooks } from './Components/MultipleCustomHooks.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode >
-    <MultipleCustomHooks/>
-  </StrictMode>,
-)
+import './07-reducer/intro-reducer.js'
+
+//createRoot(document.getElementById('root')).render(
+  //<StrictMode >
+    //<MultipleCustomHooks/>
+  //</StrictMode>,
+//)
