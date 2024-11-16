@@ -1,0 +1,107 @@
+/* Contenedor principal */
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Fondo degradado */
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Caja de autenticación */
+  .authBox {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Título */
+  .authTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input */
+  .authInput {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .authInput:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 10px rgba(116, 235, 213, 0.5);
+    outline: none;
+  }
+  
+  /* Grupo de botones */
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Botón principal */
+  .authButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .authButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Botón de Google */
+  .googleButton {
+    background-color: #db4437;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .googleButton:hover {
+    background-color: #c23321;
+    transform: scale(1.05);
+  }
+  
+  /* Botón de cerrar sesión */
+  .logoutButton {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logoutButton:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+  }
+  
+  /* Mensaje de error */
+  .errorMessage {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  

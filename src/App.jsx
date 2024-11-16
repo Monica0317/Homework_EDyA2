@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./counter/counter";
+import Auth from "./features/Auth";
 
 const App = () => {
   return (
     <div>
-      <Counter />
+      <Auth />
     </div>
   );
 };
