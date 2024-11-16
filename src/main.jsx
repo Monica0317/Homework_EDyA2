@@ -1,17 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import FirstApp from './FirstApp.jsx'
-import { ComponentApp } from './ComponentApp.jsx'
-import { useCounter } from './hooks/useCounter.jsx'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './index.css'
-import { GifGrid } from './Components/GifGrid.jsx'
-import { MultipleCustomHooks } from './Components/MultipleCustomHooks.jsx'
+import App from './App.jsx'
 
-import './07-reducer/intro-reducer.js'
-
-//createRoot(document.getElementById('root')).render(
-  //<StrictMode >
-    //<MultipleCustomHooks/>
-  //</StrictMode>,
-//)
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)

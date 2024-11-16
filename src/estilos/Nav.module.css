@@ -1,0 +1,19 @@
+.navbar {
+  border-bottom: 2px solid #007bff;
+}
+
+.navList {
+  font-size: 1.1rem;
+}
+
+.nav{
+  background: linear-gradient(90deg, #9a4dcd, #e9e9e9a4);
+  box-shadow: 3px 3px 4px 3px  rgba(81, 80, 80, 0.5);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+.nav:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
