@@ -1,10 +1,10 @@
 import React from "react";
-import Auth from "./features/Auth";
+import TodoApp from "./component/TodoApp"
 
 const App = () => {
   return (
     <div>
-      <Auth />
+      <TodoApp />
     </div>
   );
 };
